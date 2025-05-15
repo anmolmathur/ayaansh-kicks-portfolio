@@ -5,46 +5,54 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const matchImages = [
   {
     url: "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Delhi Premier League Semi-final",
+    caption: "Singa Cup - Singapore",
   },
   {
     url: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Corporate League Match",
+    caption: "Barca World Cup - Spain",
   },
   {
     url: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "State Cup Final",
+    caption: "Real Madrid World Cup - Spain",
   },
   {
     url: "https://images.unsplash.com/photo-1571056642134-45c76844a8de?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Championship Celebration",
+    caption: "Gothia Cup - Sweden",
   },
   {
     url: "https://images.unsplash.com/photo-1550881111-7cfde14b8073?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "International Tournament",
+    caption: "MFA YPL Tournament",
   },
   {
     url: "https://images.unsplash.com/photo-1624526267942-ab0c2946bbf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Team Practice Session",
+    caption: "Reliance I-League Match",
   },
 ];
 
-const trainingImages = [
+const tournamentImages = [
   {
     url: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Morning Training Session",
+    caption: "TMFC Cup Champion (2020)",
   },
   {
     url: "https://images.unsplash.com/photo-1600679472829-3044539ce8ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Fitness Training",
+    caption: "Grassroot Super Cup Winner (2020)",
   },
   {
     url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Team Strategy Session",
+    caption: "Bayside Sports Cup Champion (2022)",
   },
   {
     url: "https://images.unsplash.com/photo-1570498839593-e565b39455fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Gym Workout",
+    caption: "YSA MPL Winner (2023)",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    caption: "5v5 Sports Cup Champion (2023)",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    caption: "Nashik League Champion (2024)",
   },
 ];
 
@@ -54,19 +62,20 @@ const Gallery = () => {
       <div className="section-container">
         <h2 className="section-title text-center">Gallery</h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-          A glimpse into my football journey through photos from matches, training sessions, and special moments.
+          A glimpse into my football journey through photos from international tournaments, 
+          championship matches, and special moments in my career.
         </p>
 
-        <Tabs defaultValue="matches" className="w-full">
+        <Tabs defaultValue="international" className="w-full">
           <div className="flex justify-center mb-8">
             <TabsList>
-              <TabsTrigger value="matches">Match Photos</TabsTrigger>
-              <TabsTrigger value="training">Training</TabsTrigger>
+              <TabsTrigger value="international">International Events</TabsTrigger>
+              <TabsTrigger value="tournaments">Tournament Victories</TabsTrigger>
             </TabsList>
           </div>
           
-          <TabsContent value="matches">
-            <div className="gallery-grid">
+          <TabsContent value="international">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {matchImages.map((image, index) => (
                 <div key={index} className="overflow-hidden rounded-lg shadow-md bg-white">
                   <div className="relative aspect-[4/3]">
@@ -84,9 +93,9 @@ const Gallery = () => {
             </div>
           </TabsContent>
           
-          <TabsContent value="training">
-            <div className="gallery-grid">
-              {trainingImages.map((image, index) => (
+          <TabsContent value="tournaments">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {tournamentImages.map((image, index) => (
                 <div key={index} className="overflow-hidden rounded-lg shadow-md bg-white">
                   <div className="relative aspect-[4/3]">
                     <img 

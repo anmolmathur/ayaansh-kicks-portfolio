@@ -18,11 +18,11 @@ const Hero = () => {
               Ayaansh Mathur
             </h1>
             <h2 className="font-heading text-2xl md:text-3xl mb-6 text-gray-200">
-              Professional Football Player
+              Young Football Talent
             </h2>
             <p className="text-lg mb-8 max-w-lg">
-              A passionate and dedicated midfielder with exceptional vision and technical abilities.
-              Currently playing for Maruti Suzuki Football Club, looking to make the next big step in my career.
+              A passionate and dedicated 12-year-old striker and attacking midfielder with exceptional vision and technical abilities.
+              With 370+ matches played and 540+ career goals, I'm on a journey to reach the highest level of competitive football.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 

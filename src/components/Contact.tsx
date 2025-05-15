@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from "@/hooks/use-toast";
-import { Globe, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { Globe, Instagram, Mail, MapPin, Phone, Twitter, User } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -30,7 +30,7 @@ const Contact = () => {
     setTimeout(() => {
       toast({
         title: "Message Sent!",
-        description: "Thanks for reaching out. I'll get back to you soon."
+        description: "Thanks for reaching out. We'll get back to you soon."
       });
       
       setFormData({
@@ -47,14 +47,15 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16">
       <div className="section-container">
-        <h2 className="section-title text-center">Contact Me</h2>
+        <h2 className="section-title text-center">Contact</h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-          Interested in discussing opportunities, collaborations, or just want to connect? Feel free to reach out using the form below or through my contact details.
+          Interested in discussing opportunities, trials, academy programs, or just want to connect? 
+          Feel free to reach out using the form below or through my contact details.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           <div className="bg-gray-50 p-6 md:p-8 rounded-lg">
-            <h3 className="section-subtitle mb-6">Send Me a Message</h3>
+            <h3 className="section-subtitle mb-6">Send a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -122,10 +123,18 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-start">
+                <User className="h-5 w-5 text-football-blue mr-3 mt-1" />
+                <div>
+                  <h4 className="font-medium">Parents/Guardians</h4>
+                  <p className="text-gray-600">Anmol Mathur / Kruti Garg</p>
+                </div>
+              </div>
+            
+              <div className="flex items-start">
                 <Phone className="h-5 w-5 text-football-blue mr-3 mt-1" />
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <p className="text-gray-600">+91 98765 43210</p>
+                  <p className="text-gray-600">+91 9867191999 / +91 9967064688</p>
                 </div>
               </div>
               
@@ -133,7 +142,7 @@ const Contact = () => {
                 <Mail className="h-5 w-5 text-football-blue mr-3 mt-1" />
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-gray-600">ayaansh.mathur@example.com</p>
+                  <p className="text-gray-600">anmolm@gmail.com / krutigarg@gmail.com</p>
                 </div>
               </div>
               
@@ -141,7 +150,7 @@ const Contact = () => {
                 <MapPin className="h-5 w-5 text-football-blue mr-3 mt-1" />
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <p className="text-gray-600">Delhi, India</p>
+                  <p className="text-gray-600">Mumbai, India</p>
                 </div>
               </div>
               
@@ -161,17 +170,13 @@ const Contact = () => {
               </div>
               
               <div className="pt-4 border-t border-gray-200">
-                <h4 className="font-medium mb-4">Agent Information</h4>
-                <p className="text-gray-600 mb-2">Rohit Kumar</p>
-                <p className="text-gray-600 mb-2">Sports Management Inc.</p>
-                <div className="flex items-center">
-                  <Phone className="h-4 w-4 text-gray-500 mr-2" />
-                  <p className="text-gray-600">+91 87654 32109</p>
-                </div>
-                <div className="flex items-center mt-1">
-                  <Mail className="h-4 w-4 text-gray-500 mr-2" />
-                  <p className="text-gray-600">rohit.kumar@sportsmanagement.com</p>
-                </div>
+                <h4 className="font-medium mb-4">Available For</h4>
+                <ul className="list-disc pl-5 space-y-2 text-gray-600">
+                  <li>Football Academy Trials (International & National)</li>
+                  <li>Elite Residential Program Selections</li>
+                  <li>School Academy & Scholarship Programs</li>
+                  <li>International training camps and football exchanges</li>
+                </ul>
               </div>
             </div>
           </div>

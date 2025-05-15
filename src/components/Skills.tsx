@@ -4,57 +4,62 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const technicalSkills = [
-  { skill: "Passing", level: 92 },
-  { skill: "Shot Accuracy", level: 85 },
-  { skill: "Ball Control", level: 90 },
-  { skill: "Dribbling", level: 88 },
-  { skill: "Free Kicks", level: 80 },
-  { skill: "Crossing", level: 85 },
+  { skill: "Passing Ability", level: 90 },
+  { skill: "Dribbling", level: 92 },
+  { skill: "Finishing", level: 95 },
+  { skill: "Game Vision", level: 88 },
+  { skill: "Defensive Contributions", level: 85 },
+  { skill: "Work Rate", level: 90 },
 ];
 
 const physicalSkills = [
-  { skill: "Speed", level: 85 },
-  { skill: "Stamina", level: 90 },
+  { skill: "Speed", level: 90 },
+  { skill: "Agility", level: 88 },
+  { skill: "Endurance", level: 92 },
   { skill: "Strength", level: 82 },
-  { skill: "Agility", level: 87 },
-  { skill: "Jumping", level: 80 },
   { skill: "Balance", level: 85 },
+  { skill: "Coordination", level: 87 },
 ];
 
 const mentalSkills = [
-  { skill: "Vision", level: 95 },
-  { skill: "Positioning", level: 88 },
-  { skill: "Decision Making", level: 90 },
-  { skill: "Leadership", level: 85 },
-  { skill: "Teamwork", level: 92 },
+  { skill: "Tactical Intelligence", level: 90 },
+  { skill: "Leadership", level: 88 },
+  { skill: "Decision Making", level: 85 },
+  { skill: "Adaptability", level: 90 },
   { skill: "Composure", level: 85 },
+  { skill: "Game Reading", level: 88 },
 ];
 
 const achievements = [
   {
+    year: "2025",
+    title: "Real Madrid World Cup - Spain",
+    description: "Represented India U14 team (Real Madrid Academy). Team awarded Best Teamwork. Semi-finalist."
+  },
+  {
+    year: "2024",
+    title: "Multiple Championships",
+    description: "Played Reliance I-League Sub Junior Nationals (RFYC Mumbai U13). Interdistrict U13 Champion with Mumbai Team. Selected for RFYC National Camp top 50."
+  },
+  {
     year: "2023",
-    title: "Corporate Football League Champion",
-    description: "Led Maruti Suzuki FC to their first league title, scoring 8 goals and providing 15 assists throughout the season."
+    title: "International Exposure",
+    description: "First major international exposure at Barca World Cup (Spain). MSSA School Top Scorer. Represented Mumbai Interdistrict."
   },
   {
     year: "2022",
-    title: "Most Valuable Player",
-    description: "Named MVP of the Delhi Premier League after finishing the season with the most assists (17)."
+    title: "Major Growth Year",
+    description: "Played with Barca Mumbai. 100+ goals scored. Bayside Sports Cup champion. First Singa Cup appearance in Singapore."
   },
   {
     year: "2021",
-    title: "India U-21 Team Selection",
-    description: "Selected for the national U-21 team, representing India in the Asian Youth Championship."
+    title: "Expanding Circuits",
+    description: "Competed in YSA MPL and SSA Championship with continued strong goal-scoring form."
   },
   {
     year: "2020",
-    title: "Delhi State Cup Winner",
-    description: "Won the Delhi State Cup with the youth academy team, scoring in the final match."
-  },
-  {
-    year: "2019",
-    title: "Emerging Player of the Year",
-    description: "Recognized as the most promising young talent in the Delhi football circuit."
+    title: "Debut Year",
+    description: "Debut at SoccerStar Academy. Won early youth tournaments including TMFC Cup and Grassroot Super Cup."
   }
 ];
 
@@ -76,10 +81,10 @@ const Skills = () => {
       <div className="section-container">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h2 className="section-title">Skills & Abilities</h2>
+            <h2 className="section-title">Technical Evaluation</h2>
             <p className="mb-8 text-gray-600">
-              Throughout my career, I've worked diligently to develop a well-rounded skill set that allows me to excel in midfield positions. 
-              My greatest strengths are my vision, passing accuracy, and technical ball control.
+              Throughout my career, I've developed a well-rounded skill set validated by official coaches. 
+              My greatest strengths are my goal-scoring instinct, vision, passing accuracy, and technical ball control.
             </p>
             
             <Tabs defaultValue="technical" className="w-full">
@@ -105,22 +110,22 @@ const Skills = () => {
               </TabsContent>
             </Tabs>
 
-            <h3 className="section-subtitle mt-12">Specialties</h3>
+            <h3 className="section-subtitle mt-12">Tactical Attributes</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
               <div className="bg-gray-50 p-4 rounded-lg text-center">
-                <span className="font-medium">Through Balls</span>
+                <span className="font-medium">Formation Adaptability</span>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg text-center">
-                <span className="font-medium">Set Pieces</span>
+                <span className="font-medium">Positional Flexibility</span>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg text-center">
-                <span className="font-medium">Playmaking</span>
+                <span className="font-medium">Game Understanding</span>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg text-center">
-                <span className="font-medium">Long Shots</span>
+                <span className="font-medium">Coachable</span>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg text-center">
-                <span className="font-medium">Game Reading</span>
+                <span className="font-medium">Spatial Awareness</span>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg text-center">
                 <span className="font-medium">Leadership</span>
@@ -129,10 +134,10 @@ const Skills = () => {
           </div>
           
           <div id="achievements">
-            <h2 className="section-title">Achievements</h2>
+            <h2 className="section-title">Career Timeline</h2>
             <p className="mb-8 text-gray-600">
-              My journey has been marked by several key achievements that reflect my growth and dedication to the sport. 
-              Each milestone has pushed me to strive for greater excellence.
+              My journey has been marked by consistent growth and achievement from 2020 to 2025,
+              with increasing levels of competition and international exposure.
             </p>
             
             <div className="space-y-6">

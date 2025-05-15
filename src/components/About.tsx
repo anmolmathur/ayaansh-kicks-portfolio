@@ -1,17 +1,19 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Calendar, Clock, MapPin, Trophy } from 'lucide-react';
+import { Calendar, Clock, MapPin, Trophy, Flag, User } from 'lucide-react';
 
 const personalInfo = [
   { label: "Full Name", value: "Ayaansh Mathur" },
-  { label: "Date of Birth", value: "September 10, 1999" },
+  { label: "Date of Birth", value: "September 6, 2012" },
   { label: "Nationality", value: "Indian" },
-  { label: "Height", value: "183 cm (6'0\")" },
-  { label: "Weight", value: "75 kg" },
-  { label: "Position", value: "Midfielder (Attacking, Central)" },
-  { label: "Current Club", value: "Maruti Suzuki Football Club" },
-  { label: "Preferred Foot", value: "Right" },
+  { label: "Age", value: "12 years" },
+  { label: "Dominant Foot", value: "Right" },
+  { label: "Primary Positions", value: "Striker / Attacking Midfielder" },
+  { label: "Secondary Positions", value: "Central Defensive Midfield / Wing" },
+  { label: "Languages", value: "English, Hindi" },
+  { label: "Current City", value: "Mumbai, Maharashtra, India" },
+  { label: "Passport", value: "Available (Y9435944)" },
 ];
 
 const About = () => {
@@ -22,14 +24,14 @@ const About = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <h3 className="section-subtitle">My Journey</h3>
+            <h3 className="section-subtitle">Player Profile</h3>
             <p className="mb-4">
-              Born and raised in Delhi, I discovered my passion for football at the age of 8 when my father first took me to a local match. 
-              What began as a childhood interest quickly evolved into a serious pursuit as I joined my school team and later the Delhi Youth Academy.
+              A highly talented and dynamic young footballer with vast experience in competitive matches both nationally and internationally. 
+              Recognized for my speed, excellent ball control, vision, goal-scoring instinct, versatility across midfield and attack, and leadership on and off the pitch.
             </p>
             <p className="mb-4">
-              By 16, I was representing Delhi in national youth competitions, which laid the foundation for my professional career. 
-              After completing my education, I joined Maruti Suzuki Football Club, where I've been developing my skills and contributing to the team's success.
+              I have a proven record at club, academy, school, district, state, and international levels. 
+              My work rate, tactical intelligence, and technical precision make me a promising prospect for any elite football training program.
             </p>
             <p>
               My goal is to represent India at the international level and play in one of Europe's top leagues. 
@@ -41,27 +43,7 @@ const About = () => {
                 <CardContent className="pt-6">
                   <div className="flex items-center mb-2 text-football-blue">
                     <Clock className="h-5 w-5 mr-2" />
-                    <h4 className="font-semibold">7+ Years</h4>
-                  </div>
-                  <p className="text-gray-600">Professional Experience</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="stat-card">
-                <CardContent className="pt-6">
-                  <div className="flex items-center mb-2 text-football-blue">
-                    <Trophy className="h-5 w-5 mr-2" />
-                    <h4 className="font-semibold">15+</h4>
-                  </div>
-                  <p className="text-gray-600">Awards & Honors</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="stat-card">
-                <CardContent className="pt-6">
-                  <div className="flex items-center mb-2 text-football-blue">
-                    <Calendar className="h-5 w-5 mr-2" />
-                    <h4 className="font-semibold">150+</h4>
+                    <h4 className="font-semibold">370+</h4>
                   </div>
                   <p className="text-gray-600">Matches Played</p>
                 </CardContent>
@@ -70,10 +52,30 @@ const About = () => {
               <Card className="stat-card">
                 <CardContent className="pt-6">
                   <div className="flex items-center mb-2 text-football-blue">
-                    <MapPin className="h-5 w-5 mr-2" />
-                    <h4 className="font-semibold">5+</h4>
+                    <Trophy className="h-5 w-5 mr-2" />
+                    <h4 className="font-semibold">540+</h4>
                   </div>
-                  <p className="text-gray-600">Tournaments</p>
+                  <p className="text-gray-600">Career Goals</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="stat-card">
+                <CardContent className="pt-6">
+                  <div className="flex items-center mb-2 text-football-blue">
+                    <User className="h-5 w-5 mr-2" />
+                    <h4 className="font-semibold">55+</h4>
+                  </div>
+                  <p className="text-gray-600">Man of the Match</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="stat-card">
+                <CardContent className="pt-6">
+                  <div className="flex items-center mb-2 text-football-blue">
+                    <Flag className="h-5 w-5 mr-2" />
+                    <h4 className="font-semibold">18+</h4>
+                  </div>
+                  <p className="text-gray-600">Player of the Tournament</p>
                 </CardContent>
               </Card>
             </div>
@@ -92,19 +94,15 @@ const About = () => {
               </ul>
             </div>
             
-            <h3 className="section-subtitle mt-8">Career Highlights</h3>
-            <div className="space-y-4">
-              <div className="achievement-item">
-                <h4 className="font-medium">India U-21 National Team</h4>
-                <p className="text-sm text-gray-600">Represented India at the U-21 level in 3 international tournaments</p>
+            <h3 className="section-subtitle mt-8">Education</h3>
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="achievement-item mb-4">
+                <h4 className="font-medium">Utpal Shanghvi Global School, Mumbai</h4>
+                <p className="text-sm text-gray-600">Good academic standing with balance between sports & academics</p>
               </div>
               <div className="achievement-item">
-                <h4 className="font-medium">Delhi Premier League Champion</h4>
-                <p className="text-sm text-gray-600">Won the championship and was named Midfielder of the Tournament</p>
-              </div>
-              <div className="achievement-item">
-                <h4 className="font-medium">Corporate Football League MVP</h4>
-                <p className="text-sm text-gray-600">Named Most Valuable Player while playing for Maruti Suzuki FC</p>
+                <h4 className="font-medium">Languages Studied</h4>
+                <p className="text-sm text-gray-600">English, Hindi</p>
               </div>
             </div>
           </div>
