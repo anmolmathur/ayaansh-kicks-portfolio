@@ -1,15 +1,18 @@
 
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Card, CardContent } from '@/components/ui/card';
+import { YoutubeIcon } from 'lucide-react';
 
 const matchImages = [
   {
-    url: "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Singa Cup - Singapore",
+    url: "/lovable-uploads/1c7d037e-0bf1-4675-b208-0b69b44912c0.png",
+    caption: "Ayaansh playing for Conscient Sports",
   },
   {
-    url: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "Barca World Cup - Spain",
+    url: "/lovable-uploads/6b0e5f1c-20d5-4afc-aebd-d283d49eca2b.png",
+    caption: "Ayaansh in action during a match",
   },
   {
     url: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -20,11 +23,11 @@ const matchImages = [
     caption: "Gothia Cup - Sweden",
   },
   {
-    url: "https://images.unsplash.com/photo-1550881111-7cfde14b8073?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    url: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     caption: "MFA YPL Tournament",
   },
   {
-    url: "https://images.unsplash.com/photo-1624526267942-ab0c2946bbf3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    url: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     caption: "Reliance I-League Match",
   },
 ];
@@ -39,7 +42,7 @@ const tournamentImages = [
     caption: "Grassroot Super Cup Winner (2020)",
   },
   {
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    url: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     caption: "Bayside Sports Cup Champion (2022)",
   },
   {
@@ -47,13 +50,21 @@ const tournamentImages = [
     caption: "YSA MPL Winner (2023)",
   },
   {
-    url: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    caption: "5v5 Sports Cup Champion (2023)",
+    url: "/lovable-uploads/6b0e5f1c-20d5-4afc-aebd-d283d49eca2b.png",
+    caption: "Playing in the 5v5 Sports Cup (2023)",
   },
   {
-    url: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    url: "/lovable-uploads/1c7d037e-0bf1-4675-b208-0b69b44912c0.png",
     caption: "Nashik League Champion (2024)",
   },
+];
+
+const mediaContent = [
+  {
+    type: "youtube",
+    url: "https://www.youtube.com/embed/B7ZpkaqHNyI",
+    caption: "Ayaansh Mathur Interview",
+  }
 ];
 
 const Gallery = () => {
@@ -71,6 +82,7 @@ const Gallery = () => {
             <TabsList>
               <TabsTrigger value="international">International Events</TabsTrigger>
               <TabsTrigger value="tournaments">Tournament Victories</TabsTrigger>
+              <TabsTrigger value="media">Media Coverage</TabsTrigger>
             </TabsList>
           </div>
           
@@ -108,6 +120,32 @@ const Gallery = () => {
                     <p className="text-center text-sm text-gray-600">{image.caption}</p>
                   </div>
                 </div>
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="media">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {mediaContent.map((item, index) => (
+                <Card key={index} className="overflow-hidden">
+                  <CardContent className="p-0">
+                    {item.type === "youtube" && (
+                      <div className="aspect-video w-full">
+                        <iframe 
+                          className="w-full h-full"
+                          src={item.url} 
+                          title={item.caption}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    )}
+                    <div className="p-4 flex items-center gap-2">
+                      <YoutubeIcon className="h-5 w-5 text-red-600" />
+                      <p className="text-sm font-medium">{item.caption}</p>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </TabsContent>

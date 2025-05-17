@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="hidden md:block">
             <div className="relative h-[500px] w-full max-w-md mx-auto bg-white p-2 rounded-lg shadow-xl transform rotate-2">
               <img 
-                src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                src="/lovable-uploads/1c7d037e-0bf1-4675-b208-0b69b44912c0.png" 
                 alt="Ayaansh Mathur playing football" 
                 className="w-full h-full object-cover rounded"
               />

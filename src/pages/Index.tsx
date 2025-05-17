@@ -8,6 +8,7 @@ import Testimonials from '@/components/Testimonials';
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Achievements from '@/components/Achievements';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Hero />
       <About />
       <Skills />
+      <Achievements />
       <Testimonials />
       <Gallery />
       <Contact />
