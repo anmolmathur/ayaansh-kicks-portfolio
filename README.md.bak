@@ -71,33 +71,3 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
----
-
-## How can I run this project with Docker?
-
-This project includes a Docker setup for easy local development and production builds.
-
-**Requirements:**
-- Docker and Docker Compose installed on your system
-- No external dependencies or environment variables are required by default
-- Uses Node.js version `22.13.1` (as specified in the Dockerfile)
-
-**Build and run the app:**
-
-```sh
-# Build and start the app using Docker Compose
-docker compose up --build
-```
-
-This will build the Docker image and start the app in a container named `typescript-app`.
-
-**Ports:**
-- The app is exposed on port `4173` (Vite preview server). Access it at [http://localhost:4173](http://localhost:4173).
-
-**Configuration notes:**
-- No environment variables are required by default. If you add a `.env` file, uncomment the `env_file` line in `docker-compose.yml`.
-- No persistent volumes or additional services are configured by default.
-- The app runs as a non-root user for security.
-
-If you need to customize the setup (e.g., add a database or persistent storage), update the `docker-compose.yml` accordingly.
